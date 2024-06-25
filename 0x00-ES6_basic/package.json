@@ -12,8 +12,12 @@
     "@babel/preset-env": "^7.6.0",
     "eslint": "^6.4.0",
     "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-interactive": "^11.0.2",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jest": "^28.6.0",
     "jest": "^29.7.0"
+  },
+  "dependencies": {
+    "optionator": "^0.9.4"
   }
 }
