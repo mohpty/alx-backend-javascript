@@ -1,17 +1,14 @@
-import { uploadPhoto, createUser } from "./utils";
+import { uploadPhoto, createUser } from './utils';
 
 export default async function asyncUploadUser() {
+  let res = {};
+
   try {
-    const resFromUploadPhoto = await uploadPhoto();
-    const resFromCreateUser = await createUser();
-    return {
-      photo: resFromUploadPhoto,
-      user: resFromCreateUser,
-    };
-  } catch (err) {// eslint-disable-line no-unused-vars
-    return {
-      photo: null,
-      user: null,
-    };
+    const photo = await uploadPhoto();
+    const user = await createUser();
+    res = { photo, user };
+  } catch (err) {
+    res = { photo: null, user: null };
   }
+  return res;
 }
