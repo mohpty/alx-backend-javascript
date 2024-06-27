@@ -1,4 +1,4 @@
-import { uploadPhoto, createUser } from './utils';
+import { uploadPhoto, createUser } from "./utils";
 
 export default async function asyncUploadUser() {
   try {
@@ -8,7 +8,7 @@ export default async function asyncUploadUser() {
       photo: resFromUploadPhoto,
       user: resFromCreateUser,
     };
-  } catch (err) {
+  } catch (err) {// eslint-disable-line no-unused-vars
     return {
       photo: null,
       user: null,
